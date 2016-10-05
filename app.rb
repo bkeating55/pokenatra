@@ -13,6 +13,9 @@ get '/pokemons' do
  erb :"pokemons/index"
 end
 
-#
+get '/pokemons/:id' do
+  @pokemons= Pokemon.find(params[:id])
+  erb :"pokemons/show"
+end
 
 puts "end of application"
